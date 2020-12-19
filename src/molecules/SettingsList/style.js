@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledProfileList = styled.div`
+export const StyledSettingsList = styled.div`
   position: fixed;
   width: 120px;
   height: auto;

@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 import * as Colors from "../../styles/colors";
 
-export const StyledProfileButtonArea = styled.div`
+export const StyledSettingsButtonArea = styled.div`
   width: auto;
-  padding: 0.2rem;
+  padding: 0.8rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -13,7 +14,13 @@ export const StyledProfileButtonArea = styled.div`
   justify-self: center;
 
   &:hover {
-    background-color: ${Colors.PROFILE_BUTTON_BACKGROUND_HOVER};
+    background-color: ${Colors.SETTINGS_BUTTON_BACKGROUND_HOVER};
     color: ${Colors.NAVBAR_BACKGROUND};
   }
+`;
+
+export const StyledSettingsSpan = styled.span`
+  text-transform: lowercase;
+  font-size: 12px;
+  font-weight: bold;
 `;

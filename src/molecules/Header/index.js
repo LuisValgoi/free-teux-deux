@@ -2,10 +2,10 @@ import React from "react";
 
 import Navbar from "../../atoms/Navbar";
 import Logo from "../../atoms/Logo";
-import ProfileButton from "../../atoms/ProfileButton";
+import SettingsButton from "../../atoms/SettingsButton";
 
 import { StyledProfileButton, StyledLogo, StyledHeaderSpacer } from "./style";
-import ProfileList from "../../molecules/ProfileList";
+import SettingsList from "../../molecules/SettingsList";
 
 export default function Header() {
   return (
@@ -15,8 +15,8 @@ export default function Header() {
       </StyledLogo>
       <StyledHeaderSpacer />
       <StyledProfileButton>
-        <ProfileButton />
-        <ProfileList />
+        <SettingsButton />
+        <SettingsList />
       </StyledProfileButton>
     </Navbar>
   );
