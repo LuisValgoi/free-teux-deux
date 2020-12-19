@@ -32,6 +32,7 @@ export default function Routes() {
     return (
       <Switch>
         <Route key={RoutesPath.LOGIN.key} path={RoutesPath.LOGIN.path} component={Login} exact />
+        <Redirect from={RoutesPath.HOME.path} to={RoutesPath.LOGIN.path} />
         <Redirect from={RoutesPath.BOARD.path} to={RoutesPath.LOGIN.path} />
         <Route exact path="*" component={NotFound} />
       </Switch>
