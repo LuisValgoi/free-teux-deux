@@ -11,4 +11,8 @@ export const CONSTANTS = {
     key: "login",
     path: "/login",
   },
+  ACCOUNT: {
+    key: "account",
+    path: "/account",
+  },
 };
