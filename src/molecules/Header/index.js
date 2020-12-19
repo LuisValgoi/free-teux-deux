@@ -5,9 +5,11 @@ import Logo from "../../atoms/Logo";
 import SettingsButton from "../../atoms/SettingsButton";
 
 import { StyledProfileButton, StyledLogo, StyledHeaderSpacer } from "./style";
+import { useAuth } from "../../contexts/auth";
 import SettingsList from "../../molecules/SettingsList";
 
 export default function Header() {
+  const { signed } = useAuth();
   const [isSettingsListShown, setIsSettingsListShown] = useState(false);
 
   return (
@@ -17,8 +19,12 @@ export default function Header() {
       </StyledLogo>
       <StyledHeaderSpacer />
       <StyledProfileButton>
-        <SettingsButton onMouseEnter={() => setIsSettingsListShown(true)} />
-        {isSettingsListShown && <SettingsList onMouseLeave={() => setIsSettingsListShown(false)} />}
+        {signed && (
+          <>
+            <SettingsButton onMouseEnter={() => setIsSettingsListShown(true)} />
+            {isSettingsListShown && <SettingsList onMouseLeave={() => setIsSettingsListShown(false)} />}
+          </>
+        )}
       </StyledProfileButton>
     </Navbar>
   );
