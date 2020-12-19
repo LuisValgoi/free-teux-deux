@@ -8,7 +8,7 @@ import Board from "../pages/Board";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 
-const Routes = () => {
+export default function Routes() {
   const { signed } = useAuth();
 
   const getRoutesForSignedUsers = () => {
@@ -33,6 +33,4 @@ const Routes = () => {
   };
 
   return <>{signed ? getRoutesForSignedUsers() : getRoutesForUnauthorizedUsers()}</>;
-};
-
-export default Routes;
+}

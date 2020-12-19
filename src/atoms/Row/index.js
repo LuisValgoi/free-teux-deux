@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function index() {
+export default function Row() {
   return <div>Row</div>;
 }

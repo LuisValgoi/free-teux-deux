@@ -3,9 +3,10 @@ import React from "react";
 import Navbar from "../../atoms/Navbar";
 import Logo from "../../atoms/Logo";
 import ProfileButton from "../../atoms/ProfileButton";
+
 import { StyledProfileButton, StyledLogo, StyledHeaderSpacer } from "./style";
 
-export default function index() {
+export default function Header() {
   return (
     <Navbar>
       <StyledLogo>

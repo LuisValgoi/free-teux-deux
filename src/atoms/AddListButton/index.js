@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function index() {
-  return <div>Add</div>;
+export default function AddListButton() {
+  return <div>AddListButton</div>;
 }
