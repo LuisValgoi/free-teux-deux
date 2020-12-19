@@ -13,6 +13,14 @@ export const CONSTANTS = {
   },
   ACCOUNT: {
     key: "account",
-    path: "/account",
+    path: "/settings/account",
+  },
+  DIGEST: {
+    key: "digest",
+    path: "/settings/email",
+  },
+  COLORS: {
+    key: "colors",
+    path: "/settings/colors",
   },
 };
