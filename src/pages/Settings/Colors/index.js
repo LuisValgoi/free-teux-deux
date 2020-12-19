@@ -1,5 +1,11 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default function Colors() {
-  return <div>Colors</div>;
+  return (
+    <>
+      <Helmet title="FreeTeuxDeux - Colors" />
+      <div>Colors</div>
+    </>
+  );
 }

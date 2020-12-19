@@ -1,5 +1,11 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default function Digest() {
-  return <div>Digest</div>;
+  return (
+    <>
+      <Helmet title="FreeTeuxDeux - Digest" />
+      <div>Digest</div>
+    </>
+  );
 }
