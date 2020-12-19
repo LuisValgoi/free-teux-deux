@@ -15,7 +15,6 @@ export const StyledSettingsButtonArea = styled.div`
 
   &:hover {
     background-color: ${Colors.SETTINGS_BUTTON_BACKGROUND_HOVER};
-    color: ${Colors.NAVBAR_BACKGROUND};
   }
 `;
 

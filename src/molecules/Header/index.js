@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Navbar from "../../atoms/Navbar";
 import Logo from "../../atoms/Logo";
@@ -8,6 +8,8 @@ import { StyledProfileButton, StyledLogo, StyledHeaderSpacer } from "./style";
 import SettingsList from "../../molecules/SettingsList";
 
 export default function Header() {
+  const [isSettingsListShown, setIsSettingsListShown] = useState(false);
+
   return (
     <Navbar>
       <StyledLogo>
@@ -15,8 +17,8 @@ export default function Header() {
       </StyledLogo>
       <StyledHeaderSpacer />
       <StyledProfileButton>
-        <SettingsButton />
-        <SettingsList />
+        <SettingsButton onMouseEnter={() => setIsSettingsListShown(true)} />
+        {isSettingsListShown && <SettingsList onMouseLeave={() => setIsSettingsListShown(false)} />}
       </StyledProfileButton>
     </Navbar>
   );

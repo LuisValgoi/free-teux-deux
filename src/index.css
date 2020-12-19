@@ -7,8 +7,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Helvetica Neue", Helvetica, -apple-system, system-ui, sans-serif;
 }
 
 #root {

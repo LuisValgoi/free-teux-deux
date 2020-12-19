@@ -3,8 +3,12 @@ import { useHistory } from "react-router-dom";
 
 import { StyledSettingsListItem } from "./style";
 
-export default function SettingsListItem({ text, to }) {
+export default function SettingsListItem({ text, to, onMouseLeave }) {
   const history = useHistory();
 
-  return <StyledSettingsListItem onClick={() => history.push(to)}>{text}</StyledSettingsListItem>;
+  return (
+    <StyledSettingsListItem onMouseLeave={onMouseLeave} onClick={() => history.push(to)}>
+      {text}
+    </StyledSettingsListItem>
+  );
 }
