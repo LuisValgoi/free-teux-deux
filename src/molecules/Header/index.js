@@ -5,6 +5,7 @@ import Logo from "../../atoms/Logo";
 import ProfileButton from "../../atoms/ProfileButton";
 
 import { StyledProfileButton, StyledLogo, StyledHeaderSpacer } from "./style";
+import ProfileList from "../../molecules/ProfileList";
 
 export default function Header() {
   return (
@@ -15,6 +16,7 @@ export default function Header() {
       <StyledHeaderSpacer />
       <StyledProfileButton>
         <ProfileButton />
+        <ProfileList />
       </StyledProfileButton>
     </Navbar>
   );
