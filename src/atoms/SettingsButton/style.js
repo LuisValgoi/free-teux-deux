@@ -1,25 +1,10 @@
 import styled from "styled-components";
 
 import * as Colors from "../../styles/colors";
+import ButtonBase from "../ButtonBase";
 
-export const StyledSettingsButtonArea = styled.div`
-  width: auto;
-  padding: 0.8rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
-
+export const StyledSettingsButtonArea = styled(ButtonBase)`
   &:hover {
     background-color: ${Colors.SETTINGS_BUTTON_BACKGROUND_HOVER};
   }
-`;
-
-export const StyledSettingsSpan = styled.span`
-  text-transform: lowercase;
-  font-size: 12px;
-  font-weight: bold;
 `;

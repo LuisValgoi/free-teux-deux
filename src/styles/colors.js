@@ -4,6 +4,8 @@ export const CONTENT_BACKGROUND = "#FFFFFF";
 
 export const NAVBAR_BACKGROUND = "#000000";
 
+export const BUTTON_COLOR_DEFAULT = "#FFFFFF";
+
 export const SETTINGS_BUTTON_BACKGROUND_HOVER = "#5C5C5C";
 export const SETTINGS_BUTTON_COLOR_HOVER = "#000000";
 
