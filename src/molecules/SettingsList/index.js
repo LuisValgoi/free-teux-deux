@@ -22,11 +22,11 @@ const SETTINGS_ITEMS = [
   },
 ];
 
-export default function SettingsList({ onMouseLeave }, props) {
+export default function SettingsList(props) {
   return (
     <StyledSettingsList {...props}>
       {SETTINGS_ITEMS.map((item) => {
-        return <SettingsListItem onMouseLeave={onMouseLeave} key={item.key} text={item.text} to={item.path} />;
+        return <SettingsListItem key={item.key} text={item.text} to={item.path} />;
       })}
     </StyledSettingsList>
   );
