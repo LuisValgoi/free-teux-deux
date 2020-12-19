@@ -1,0 +1,5 @@
+export const APP_BACKGROUND = "#FFFFFF";
+
+export const NAVBAR_BACKGROUND = "#000000";
+
+export const BOARD_SEPARATOR_BACKGROUND = "#F8F8F8";
