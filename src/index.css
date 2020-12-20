@@ -16,3 +16,8 @@ code {
   width: 100%;
   overflow: auto;
 }
+
+@font-face {
+  font-family: 'TitleTX';
+  src: local('TitleTX'), url(./fonts/alternate-gothic-no1-d.otf) format('truetype');
+}
