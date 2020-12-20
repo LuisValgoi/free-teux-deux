@@ -4,11 +4,19 @@ export const StyledMainSection = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 `;
 
-export const StyledSection = styled.div`
-  min-height: 50%;
+export const StyledPrimarySection = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
   flex-direction: row;
-  justify-content: space-between;
+`;
+
+export const StyledSecondarySection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: row;
 `;

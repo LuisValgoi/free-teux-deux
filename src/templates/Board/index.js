@@ -1,11 +1,11 @@
 import React from "react";
-import { StyledMainSection, StyledSection } from "./style";
+import { StyledMainSection, StyledPrimarySection, StyledSecondarySection } from "./style";
 
 export default function Board({ primary, secondary }) {
   return (
     <StyledMainSection>
-      <StyledSection>{primary}</StyledSection>
-      <StyledSection>{secondary}</StyledSection>
+      <StyledPrimarySection>{primary}</StyledPrimarySection>
+      <StyledSecondarySection>{secondary}</StyledSecondarySection>
     </StyledMainSection>
   );
 }
