@@ -24,7 +24,7 @@ export default function ListRow() {
   return (
     <StyledOrderedList>
       {ITEMS_TO_FILL_PRIMARY_SECTION.map((item) => {
-        return <StyledListItem key={item} />;
+        return <StyledListItem key={item.key} />;
       })}
     </StyledOrderedList>
   );
