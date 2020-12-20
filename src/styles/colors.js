@@ -2,6 +2,8 @@ export const CONTENT_BACKGROUND = "#FFFFFF";
 
 export const NAVBAR_BACKGROUND = "#000000";
 
+export const TEXT_DISABLED_BORDER = "#d8d8d8";
+
 export const BUTTON_COLOR_DEFAULT = "#FFFFFF";
 export const BUTTON_COLOR_PRIMARY = "#f41d12";
 export const BUTTON_COLOR_PRIMARY_HOVER = "#000000";

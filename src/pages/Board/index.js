@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet";
 import List from "../../molecules/List";
 import BoardTemplate from "../../templates/Board";
 
+import * as date from "../../utils/date";
+
 export default function Board() {
   return (
     <>
@@ -10,13 +12,13 @@ export default function Board() {
       <BoardTemplate
         primary={
           <>
-            <List title="Domingo" subtitle="20 de Dezembro de 2020" />
-            <List title="Segunda" subtitle="20 de Dezembro de 2020" />
-            <List title="Terça" subtitle="20 de Dezembro de 2020" />
-            <List title="Quarta" subtitle="20 de Dezembro de 2020" />
-            <List title="Quinta" subtitle="20 de Dezembro de 2020" />
-            <List title="Sexta" subtitle="20 de Dezembro de 2020" />
-            <List last title="Sabado" subtitle="20 de Dezembro de 2020" />
+            <List disabled={true} title={date.getWeekDayDecreasedBy(1)} subtitle={date.getFullWeekDayDecreasedBy(1)} />
+            <List title={date.getCurrentWeekDay()} subtitle={date.getFullCurrentWeekDay()} />
+            <List title={date.getWeekDayIncrementedBy(1)} subtitle={date.getFullWeekDayIncrementedBy(1)} />
+            <List title={date.getWeekDayIncrementedBy(2)} subtitle={date.getFullWeekDayIncrementedBy(2)} />
+            <List title={date.getWeekDayIncrementedBy(3)} subtitle={date.getFullWeekDayIncrementedBy(3)} />
+            <List title={date.getWeekDayIncrementedBy(4)} subtitle={date.getFullWeekDayIncrementedBy(4)} />
+            <List last title={date.getWeekDayIncrementedBy(5)} subtitle={date.getFullWeekDayIncrementedBy(5)} />
           </>
         }
         secondary={

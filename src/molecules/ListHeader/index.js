@@ -3,11 +3,11 @@ import { StyledListHeader } from "./style";
 import Title from "../../atoms/Title";
 import SubTitle from "../../atoms/SubTitle";
 
-export default function ListHeader({ title, subtitle }) {
+export default function ListHeader({ title, subtitle, disabled }) {
   return (
     <StyledListHeader>
-      <Title text={title} />
-      <SubTitle text={subtitle} />
+      <Title disabled={disabled} text={title} />
+      <SubTitle disabled={disabled} text={subtitle} />
     </StyledListHeader>
   );
 }
