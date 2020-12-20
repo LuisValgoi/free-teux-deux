@@ -3,7 +3,7 @@ import styled from "styled-components";
 import * as Colors from "../../styles/colors";
 
 export const StyledSettingsListItem = styled.button`
-  height: 30px;
+  height: 36px;
   width: 100%;
   padding: 0.2rem 0.2rem 0.2rem 0.5rem;
   color: ${Colors.SETTINGS_LIST_ITEM_COLOR};
