@@ -24,7 +24,7 @@ export const StyledButtonBase = styled.button`
 `;
 
 export const StyledSpan = styled.span`
-  color: ${Colors.BUTTON_COLOR_DEFAULT};
+  color: ${(props) => (props.color ? props.color : Colors.BUTTON_COLOR_DEFAULT)};
   margin-left: 0.1rem;
   text-transform: lowercase;
   font-size: 12px;
