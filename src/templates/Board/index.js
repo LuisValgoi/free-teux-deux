@@ -1,19 +1,19 @@
 import React from "react";
 import { StyledMainSection, StyledNav, StyledPrimarySection, StyledSecondarySection, StyledSection } from "./style";
 
-export default function Board({ primary, primaryNavLeft, primaryNavRight, secondary, secondaryNavLeft, secondaryNavRight }) {
+export default function Board(props) {
   return (
     <StyledMainSection>
       <StyledSection>
-        <StyledNav>{primaryNavLeft}</StyledNav>
-        <StyledPrimarySection>{primary}</StyledPrimarySection>
-        <StyledNav>{primaryNavRight}</StyledNav>
+        <StyledNav>{props.primaryNavLeft}</StyledNav>
+        <StyledPrimarySection primaryAxisX={props.primaryAxisX}>{props.primary}</StyledPrimarySection>
+        <StyledNav>{props.primaryNavRight}</StyledNav>
       </StyledSection>
 
       <StyledSection>
-        <StyledNav></StyledNav>
-        <StyledSecondarySection>{secondary}</StyledSecondarySection>
-        <StyledNav></StyledNav>
+        <StyledNav>{props.secondaryNavLeft}</StyledNav>
+        <StyledSecondarySection>{props.secondary}</StyledSecondarySection>
+        <StyledNav>{props.secondaryNavRight}</StyledNav>
       </StyledSection>
     </StyledMainSection>
   );
