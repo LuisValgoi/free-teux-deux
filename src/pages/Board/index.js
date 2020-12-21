@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import List from "../../molecules/List";
 import BoardTemplate from "../../templates/Board";
@@ -37,25 +37,6 @@ export default function Board() {
     );
   };
 
-  const getCurrentWeek = useCallback(() => {
-    return (
-      <>
-        {currentWeek.map((dayOfTheCurrentWeek) => {
-          return (
-            <List
-              id={dayOfTheCurrentWeek.id}
-              key={dayOfTheCurrentWeek.id}
-              disabled={date.getDisabledDates(dayOfTheCurrentWeek.dayOfTheYear)}
-              title={dayOfTheCurrentWeek.dayOfTheWeek}
-              subtitle={dayOfTheCurrentWeek.dayOfTheYear}
-              last={days[dayOfTheCurrentWeek.id].numberOfTheWeek > dayOfTheCurrentWeek.numberOfTheWeek}
-            />
-          );
-        })}
-      </>
-    );
-  }, [currentWeek, days]);
-
   useEffect(() => {
     async function loadDays() {
       const days = await dayService.days();
@@ -74,7 +55,22 @@ export default function Board() {
       <Helmet title="FreeTeuxDeux - Board" />
       <BoardTemplate
         primaryAxisX={primaryAxisX}
-        primary={getCurrentWeek()}
+        primary={
+          <>
+            {currentWeek.map((dayOfTheCurrentWeek) => {
+              return (
+                <List
+                  id={dayOfTheCurrentWeek.id}
+                  key={dayOfTheCurrentWeek.id}
+                  disabled={date.getDisabledDates(dayOfTheCurrentWeek.dayOfTheYear)}
+                  title={dayOfTheCurrentWeek.dayOfTheWeek}
+                  subtitle={dayOfTheCurrentWeek.dayOfTheYear}
+                  last={days[dayOfTheCurrentWeek.id].numberOfTheWeek > dayOfTheCurrentWeek.numberOfTheWeek}
+                />
+              );
+            })}
+          </>
+        }
         primaryNavLeft={
           <>
             <NavIcon primary icon="angle-left" onClick={() => setPrimaryAxisX(primaryAxisX + 14.3)} />
