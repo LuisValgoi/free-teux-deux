@@ -1,22 +1,13 @@
 import React from "react";
-import NavIcon from "../../atoms/NavIcon";
 import { StyledMainSection, StyledNav, StyledPrimarySection, StyledSecondarySection, StyledSection } from "./style";
 
-export default function Board({ primary, secondary }) {
+export default function Board({ primary, primaryNavLeft, primaryNavRight, secondary, secondaryNavLeft, secondaryNavRight }) {
   return (
     <StyledMainSection>
       <StyledSection>
-        <StyledNav>
-          <NavIcon primary icon="angle-left" />
-          <NavIcon icon="angle-double-left" />
-          <NavIcon icon="home" />
-        </StyledNav>
+        <StyledNav>{primaryNavLeft}</StyledNav>
         <StyledPrimarySection>{primary}</StyledPrimarySection>
-        <StyledNav>
-          <NavIcon primary icon="angle-right" />
-          <NavIcon icon="angle-double-right" />
-          <NavIcon icon="calendar-alt" />
-        </StyledNav>
+        <StyledNav>{primaryNavRight}</StyledNav>
       </StyledSection>
 
       <StyledSection>

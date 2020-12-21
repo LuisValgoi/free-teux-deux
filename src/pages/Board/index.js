@@ -5,6 +5,7 @@ import BoardTemplate from "../../templates/Board";
 
 import * as date from "../../utils/date";
 import * as dayService from "../../services/days";
+import NavIcon from "../../atoms/NavIcon";
 
 export default function Board() {
   const [days, setDays] = useState([]);
@@ -36,6 +37,20 @@ export default function Board() {
                 />
               );
             })}
+          </>
+        }
+        primaryNavLeft={
+          <>
+            <NavIcon primary icon="angle-left" />
+            <NavIcon icon="angle-double-left" />
+            <NavIcon icon="home" />
+          </>
+        }
+        primaryNavRight={
+          <>
+            <NavIcon primary icon="angle-right" />
+            <NavIcon icon="angle-double-right" />
+            <NavIcon icon="calendar-alt" />
           </>
         }
         secondary={
