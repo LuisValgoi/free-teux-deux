@@ -21,6 +21,9 @@ export const StyledPrimarySection = styled.div`
   flex-grow: 1;
   flex-direction: row;
   overflow: auto;
+
+  transform: ${(props) => `translateX(${props.primaryAxisX}%)`};
+  transition: all 1s;
 `;
 
 export const StyledSecondarySection = styled.div`
@@ -32,13 +35,15 @@ export const StyledSecondarySection = styled.div`
   overflow: auto;
 `;
 
-export const StyledNav = styled.div`
+export const StyledNav = styled.nav`
+  z-index: 99;
+  background-color: ${Colors.CONTENT_BACKGROUND};
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 4rem;
-  border-right: 1px solid ${Colors.LIST_BORDER};
   border-left: 1px solid ${Colors.LIST_BORDER};
+  border-right: 1px solid ${Colors.LIST_BORDER};
 `;

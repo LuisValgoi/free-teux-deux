@@ -8,7 +8,7 @@ export const StyledIconBase = styled.i`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.4);
+    transform: scale(1.3);
     transition: all 0.2s;
   }
 `;

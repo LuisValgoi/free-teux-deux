@@ -7,4 +7,9 @@ export const StyledNavIcon = styled(IconBase)`
   margin-top: 0.5rem;
   font-size: ${(props) => (props.primary ? "3rem" : "1rem")};
   color: ${(props) => (props.primary ? Colors.NAV_ICON_COLOR_PRIMARY : Colors.NAV_ICON_COLOR)};
+
+  &:hover {
+    transition: all 0.2s;
+    color: ${(props) => (props.primary ? Colors.NAV_ICON_COLOR_PRIMARY_HOVER : Colors.NAV_ICON_COLOR_HOVER)};
+  }
 `;
