@@ -10,7 +10,7 @@ export function getFullCurrentWeekDay() {
 }
 
 export function getDisabledDates(dayOfTheYear) {
-  return toDate(dayOfTheYear) < new Date();
+  return toDate(dayOfTheYear) < toDate(new Date().toLocaleDateString());
 }
 
 function toDate(dateStr) {
