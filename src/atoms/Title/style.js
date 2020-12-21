@@ -4,7 +4,7 @@ import * as Colors from "../../styles/colors";
 
 export const StyledTitle = styled.h2`
   font-family: TitleTX, -apple-system, system-ui, sans-serif;
-  font-size: 40px;
+  font-size: 33px;
   line-height: 66px;
   font-weight: normal;
   text-transform: uppercase;
