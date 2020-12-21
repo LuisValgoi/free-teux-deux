@@ -23,7 +23,7 @@ export const StyledPrimarySection = styled.div`
   overflow: auto;
 
   transform: ${(props) => `translateX(${props.primaryAxisX}%)`};
-  transition: all 1s;
+  transition: all 0.5s;
 `;
 
 export const StyledSecondarySection = styled.div`
