@@ -5,13 +5,9 @@ import { StyledList } from "./style";
 
 export default function List(props) {
   return (
-    <>
-      {props.condition && (
-        <StyledList {...props}>
-          <ListHeader disabled={props.disabled} title={props.title} subtitle={props.subtitle} />
-          <ListRow />
-        </StyledList>
-      )}
-    </>
+    <StyledList {...props}>
+      <ListHeader disabled={props.disabled} title={props.title} subtitle={props.subtitle} />
+      <ListRow />
+    </StyledList>
   );
 }
