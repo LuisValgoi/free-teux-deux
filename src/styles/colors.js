@@ -15,3 +15,8 @@ export const SETTINGS_LIST_ITEM_BACKGROUND_HOVER = "#D8D8D8";
 export const SETTINGS_LIST_ITEM_COLOR = "#000000";
 
 export const LIST_BORDER = "#d8d8d8";
+
+export const ICON_COLOR = "000000";
+
+export const NAV_ICON_COLOR = "#d8d8d8";
+export const NAV_ICON_COLOR_PRIMARY = "#000000";

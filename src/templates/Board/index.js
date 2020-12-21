@@ -1,4 +1,5 @@
 import React from "react";
+import NavIcon from "../../atoms/NavIcon";
 import { StyledMainSection, StyledNav, StyledPrimarySection, StyledSecondarySection, StyledSection } from "./style";
 
 export default function Board({ primary, secondary }) {
@@ -6,15 +7,15 @@ export default function Board({ primary, secondary }) {
     <StyledMainSection>
       <StyledSection>
         <StyledNav>
-          <div style={{ marginTop: "1rem" }}>
-            <i style={{ textAlign: "center", fontSize: "2rem" }} className="fas fa-angle-left"></i>
-          </div>
+          <NavIcon primary icon="angle-left" />
+          <NavIcon icon="angle-double-left" />
+          <NavIcon icon="home" />
         </StyledNav>
         <StyledPrimarySection>{primary}</StyledPrimarySection>
         <StyledNav>
-          <div style={{ marginTop: "1rem" }}>
-            <i style={{ textAlign: "center", fontSize: "2rem" }} className="fas fa-angle-right"></i>
-          </div>
+          <NavIcon primary icon="angle-right" />
+          <NavIcon icon="angle-double-right" />
+          <NavIcon icon="calendar-alt" />
         </StyledNav>
       </StyledSection>
 
