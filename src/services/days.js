@@ -370,6 +370,6 @@ export function days() {
         { id: 366, numberOfTheDay: 366, dayOfTheWeek: "quinta-feira", dayOfTheYear: "31/12/2020", numberOfTheWeek: 53 },
         { id: 367, numberOfTheDay: 367, dayOfTheWeek: "sexta-feira", dayOfTheYear: "01/01/2021", numberOfTheWeek: 53 },
       ]);
-    }, 2000);
+    }, 0);
   });
 }
