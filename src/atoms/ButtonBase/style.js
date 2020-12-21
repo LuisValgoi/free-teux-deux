@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import * as Colors from "../../styles/colors";
+import IconBase from "../IconBase";
 
 export const StyledButtonBase = styled.button`
   padding: 0.8rem;
@@ -31,7 +32,8 @@ export const StyledSpan = styled.span`
   font-weight: bold;
 `;
 
-export const StyledIconArea = styled.div`
+export const StyledIconArea = styled(IconBase)`
+  font-size: 1rem;
   min-width: 1rem;
   max-width: 1rem;
   margin-left: 0.1rem;

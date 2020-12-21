@@ -5,11 +5,7 @@ export default function ButtonBase(props) {
   return (
     <StyledButtonBase {...props}>
       {props.text && <StyledSpan>{props.text}</StyledSpan>}
-      {props.icon && (
-        <StyledIconArea>
-          <i className={`fas fa-${props.icon}`}></i>
-        </StyledIconArea>
-      )}
+      {props.icon && <StyledIconArea icon={props.icon} />}
     </StyledButtonBase>
   );
 }
