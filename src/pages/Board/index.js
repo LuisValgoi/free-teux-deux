@@ -20,12 +20,32 @@ export default function Board() {
     );
   };
 
+  const handleNavDayBack = () => {
+    const bkpCurrentWeek = Object.assign([], currentWeek);
+    const newDay = days.find((day) => {
+      return day.numberOfTheDay === currentWeek[0].numberOfTheDay - 1;
+    });
+    bkpCurrentWeek.unshift(newDay);
+    setCurrentWeek(bkpCurrentWeek);
+    setPrimaryAxisX(primaryAxisX + 14.3);
+  };
+
   const handleNavWeekForward = () => {
     setCurrentWeek(
       days.filter((day) => {
         return day.numberOfTheWeek === (currentWeek[0] && currentWeek[0].numberOfTheWeek + 1);
       })
     );
+  };
+
+  const handleNavDayForward = () => {
+    const bkpCurrentWeek = Object.assign([], currentWeek);
+    const newDay = days.find((day) => {
+      return day.numberOfTheDay === currentWeek[0].numberOfTheDay + 1;
+    });
+    bkpCurrentWeek.push(newDay);
+    setCurrentWeek(bkpCurrentWeek);
+    setPrimaryAxisX(primaryAxisX - 14.3);
   };
 
   const handleNavWeekOriginal = () => {
@@ -65,7 +85,7 @@ export default function Board() {
                   disabled={date.getDisabledDates(dayOfTheCurrentWeek.dayOfTheYear)}
                   title={dayOfTheCurrentWeek.dayOfTheWeek}
                   subtitle={dayOfTheCurrentWeek.dayOfTheYear}
-                  last={days[dayOfTheCurrentWeek.id].numberOfTheWeek > dayOfTheCurrentWeek.numberOfTheWeek}
+                  last={days[dayOfTheCurrentWeek.id] && days[dayOfTheCurrentWeek.id].numberOfTheWeek > dayOfTheCurrentWeek.numberOfTheWeek}
                 />
               );
             })}
@@ -73,14 +93,14 @@ export default function Board() {
         }
         primaryNavLeft={
           <>
-            <NavIcon primary icon="angle-left" onClick={() => setPrimaryAxisX(primaryAxisX + 14.3)} />
+            <NavIcon primary icon="angle-left" onClick={() => handleNavDayBack()} />
             <NavIcon icon="angle-double-left" onClick={() => handleNavWeekBack()} />
             <NavIcon icon="home" onClick={() => handleNavWeekOriginal()} />
           </>
         }
         primaryNavRight={
           <>
-            <NavIcon primary icon="angle-right" onClick={() => setPrimaryAxisX(primaryAxisX - 14.3)} />
+            <NavIcon primary icon="angle-right" onClick={() => handleNavDayForward()} />
             <NavIcon icon="angle-double-right" onClick={() => handleNavWeekForward()} />
             <NavIcon icon="calendar-alt" />
           </>
