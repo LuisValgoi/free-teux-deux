@@ -12,49 +12,20 @@ export default function Board() {
   const [currentWeek, setCurrentWeek] = useState([]);
   const [primaryAxisX, setPrimaryAxisX] = useState(0);
 
-  const handleNavWeekBack = () => {
-    setCurrentWeek(
-      days.filter((day) => {
-        return day.numberOfTheWeek === (currentWeek[0] && currentWeek[0].numberOfTheWeek - 1);
-      })
-    );
-  };
+  const handleNavWeekBack = () => {};
 
   const handleNavDayBack = () => {
-    const bkpCurrentWeek = Object.assign([], currentWeek);
-    const newDay = days.find((day) => {
-      return day.numberOfTheDay === currentWeek[0].numberOfTheDay - 1;
-    });
-    bkpCurrentWeek.unshift(newDay);
-    setCurrentWeek(bkpCurrentWeek);
     setPrimaryAxisX(primaryAxisX + 14.3);
   };
 
-  const handleNavWeekForward = () => {
-    setCurrentWeek(
-      days.filter((day) => {
-        return day.numberOfTheWeek === (currentWeek[0] && currentWeek[0].numberOfTheWeek + 1);
-      })
-    );
-  };
+  const handleNavWeekForward = () => {};
 
   const handleNavDayForward = () => {
-    const bkpCurrentWeek = Object.assign([], currentWeek);
-    const newDay = days.find((day) => {
-      return day.numberOfTheDay === currentWeek[0].numberOfTheDay + 1;
-    });
-    bkpCurrentWeek.push(newDay);
-    setCurrentWeek(bkpCurrentWeek);
     setPrimaryAxisX(primaryAxisX - 14.3);
   };
 
-  const handleNavWeekOriginal = () => {
+  const handleNavWeekToday = () => {
     setPrimaryAxisX(0);
-    setCurrentWeek(
-      days.filter((day) => {
-        return day.numberOfTheWeek === date.getCurrentWeekNumber();
-      })
-    );
   };
 
   useEffect(() => {
@@ -95,7 +66,7 @@ export default function Board() {
           <>
             <NavIcon primary icon="angle-left" onClick={() => handleNavDayBack()} />
             <NavIcon icon="angle-double-left" onClick={() => handleNavWeekBack()} />
-            <NavIcon icon="home" onClick={() => handleNavWeekOriginal()} />
+            <NavIcon icon="home" onClick={() => handleNavWeekToday()} />
           </>
         }
         primaryNavRight={
