@@ -105,21 +105,6 @@ export default function Board() {
             <NavIcon icon="calendar-alt" />
           </>
         }
-        secondaryNavLeft={
-          <>
-            <NavIcon primary icon="angle-left" onClick={() => alert("secondaryNavLeft")} />
-          </>
-        }
-        secondaryNavRight={
-          <>
-            <NavIcon primary icon="angle-right" onClick={() => alert("secondaryNavRight")} />
-          </>
-        }
-        secondary={
-          <>
-            <h1>h2</h1>
-          </>
-        }
       ></BoardTemplate>
     </>
   );
